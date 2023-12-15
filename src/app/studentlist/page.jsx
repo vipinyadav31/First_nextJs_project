@@ -1,5 +1,7 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
+import imgLogo from "../../../public/img5.jpg"
 const page = () => {
     
     const arr = ["raj", "navish", "vipin", "vijay", "rohan", "shivam"];
@@ -20,6 +22,11 @@ const page = () => {
                     );
                 })}
             </ul>
+             <Image src={imgLogo} 
+             alt="can't load"
+            width={400}
+            height={200}        
+             />
             {/* <ul>
                 <li>
                     <Link href="/studentlist/1">vipin</Link>
