@@ -1,22 +1,38 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+"use client";
+import styles from "./page.module.css";
+import Link from "next/link";
+// import { useReducer } from 'react
+import { useRouter } from "next/navigation";
 
 export default function Home() {
-  return (
-    <main className={styles.main}>
+    const navig = useRouter();
 
-     <User  name = "vipin yadav" /> 
-         <h1>hellow this is vipin </h1>
-    </main>
-    
-  )
+    const showPage = (locate) => {
+
+        navig.push(locate);
+    }
+    const aleartFun = (item) => {
+        alert(item);
+    };
+    return (
+        <main className={styles.main}>
+            <User name="vipin yadav" />
+            {/* <a href="/users" className="anchor">
+                api data nave bar
+            </a> */}
+            {/* <Link href="/users">api data nave bar</Link> */}
+            <button onClick={() => showPage("/users")}>users page  </button>
+            <button onClick={() => showPage("/login")}> Login  page  </button>
+            <Link href='/studentlist'>student LIst</Link>
+            <Link href='/study'>study</Link>
+        </main>
+    );
 }
 
 const User = (naam) => {
-
-  return(
-    <div>
-      <h1>my name is {naam.name}</h1>
-    </div>
-  )
-}
+    return (
+        <div>
+            <h1>my name is {naam.name} & welcome to the home page</h1>
+        </div>
+    );
+};
