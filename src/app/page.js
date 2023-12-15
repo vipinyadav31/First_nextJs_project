@@ -23,6 +23,8 @@ export default function Home() {
             {/* <Link href="/users">api data nave bar</Link> */}
             <button onClick={() => showPage("/users")}>users page  </button>
             <button onClick={() => showPage("/login")}> Login  page  </button>
+            <Link href='/studentlist'>student LIst</Link>
+            <Link href='/study'>study</Link>
         </main>
     );
 }
@@ -30,7 +32,7 @@ export default function Home() {
 const User = (naam) => {
     return (
         <div>
-            <h1>my name is {naam.name}</h1>
+            <h1>my name is {naam.name} & welcome to the home page</h1>
         </div>
     );
 };

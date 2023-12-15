@@ -105,3 +105,28 @@ a {
     color-scheme: dark;
   }
 } */
+
+.parent{
+  background-color: black;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  list-style-type: none;
+
+  margin: 0;
+
+
+}
+li{
+  text-decoration: none;
+  /* margin-top: 40px;
+   */
+   list-style-type: none;
+   color:wheat
+
+}
+.parent li a{
+  text-decoration: none;
+  color: white;
+}
