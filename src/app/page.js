@@ -16,6 +16,7 @@ export default function Home() {
     // const aleartFun = (item) => {
     //     alert(item);
     // };
+    console.log(process.env)
     return (
         <main className={styles.main}>
             <User name="vipin yadav" />
@@ -32,6 +33,7 @@ export default function Home() {
             <Link href="/study">study</Link>
             <Link href="/users">Data faching </Link>
         </main>
+
     );
 }
 
